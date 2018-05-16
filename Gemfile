@@ -37,6 +37,7 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'devise', '~> 4.2'
 gem 'activeadmin'
+gem 'acts_as_follower', github: 'tcocca/acts_as_follower'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
