@@ -4,8 +4,12 @@
     <div class="col-md-4">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Your Account</h5>
-          <p class="card-text"><%= link_to current_user.username, user_path(current_user.username) %></p>
+          <% if user_signed_in? %>
+            <h5 class="card-title">Your Account</h5>
+            <p class="card-text"><%= link_to current_user.username, user_path(current_user.username) %></p>
+          <% else %>
+            <p class="card-text"><%= link_to "Sign up now", signup_path %></p>
+          <% end %>
         </div>
       </div>
     </div>
